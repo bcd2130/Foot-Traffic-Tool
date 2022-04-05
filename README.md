@@ -1,67 +1,96 @@
-# Foot-Traffic-Tool
+## Foot Traffic Analysis Tool
 
-Visibility Quality Tool
-description
+![FootTrafficSmallest](https://user-images.githubusercontent.com/69476462/161852711-5b2ed707-fe72-4132-a269-1d479ab4b3da.gif)
 
-Description
-This is a basic description of the tool that is simple enough that for anyone to understand what the tool does and why someone would use it. Keep it to 3 sentences or less.
+Animation showing the generated analysis meshes of a procedurally generated urban model.
 
-How To Use
-Step by Step Instructions:
+### Description
 
-Link to epw file
-Link to epw file`
-Right click on "Context" -> Select Multiple and select building obstructions.
-Right click on "Ground" -> Select Multiple and select ground.
-Right click on "Ground" -> Select Multiple and select the massing(s) you want to test.
-Adjust Threshold X,Y,Z
-Review visual and metric outputs. Does it look correct? Does something look wrong? Common issues below.
-description
+This tool analyzes the most common routes from local residences to user designated destinations (i.e. metro stations, key institutions, shopping centers, etc.)  The tool quantifies how many times each stretch of road is used to reach each given destination and displays these results on screen.  An optional functionality within the tool allows the user to allocate additional built stock alongside the streets that have the most traffic.  This generative approach is designed to facilitate efficiently placed commercial zoning development where pedestrian activity is the highest (and thus most lucrative.)
 
-Troubleshooting
+### How To Use
+
+<b>Step by Step Instructions:</b>
+
+1. Link to epw file
+1. Link to epw file`
+2. Right click on "Context" -> Select Multiple and select building obstructions.
+3. Right click on "Ground" -> Select Multiple and select ground.
+4. Right click on "Ground" -> Select Multiple and select the massing(s) you want to test.
+5. Adjust Threshold X,Y,Z
+6. Review visual and metric outputs. Does it look correct? Does something look wrong? Common issues below.
+
+![description](../images/grasshopper_tree.jpg)
+
+
+#### Troubleshooting
+
 Make sure to properly load the context as it is crucial for to test visibility quality
 
 If you don't already have the Visibility Quality Tool, please add to your library for easy usage.
 
-Required Files
-Rhino File
-
-Grasshopper File
-
-description
+<!--add a list your downloadable links below with "link " appended to the beginning. You should have sample rhino + grasshopper files and a legend-->
 
 
-Modeling Standards
-Please follow the following Rhino standards to ensure the proper functionality of the tool:
+#### Required Files
 
-My test massing is a single, simplified, CLOSED polysurface.
+[Rhino File](https://github.com/XIM-GSAPP/XIM-GSAPP-Fa20/raw/main/src/files/Analysis%20Tool%20Example.3dm)
 
-Try "SelClosedSrf" to make sure it is closed.
-My model is oriented to True North.
+[Grasshopper File](https://github.com/XIM-GSAPP/XIM-GSAPP-Fa20/raw/main/src/files/Analysis%20Tool%20Example.gh)
 
-Re-orient if it was rotated off of North at the start of the project.
-Any groups or blocks in the model have been ungrouped/exploded.
 
-Try "SelBlockInstance" and "SelGroup" to make sure.
-My model is set to either Meters or Feet (not mm or in).
+![description](../images/tool_example_4.jpg)
 
-My model is free of overlapping, coplanar, or intersecting geometry.
 
-Any obstructions around the space have been modeled (trees, topography, buildings).
+<br />
 
-Any curved surfaces in the model have been simplified to individual flat planes.
+<!-- ![description of image](/XIM-GSAPP-Fa20/images/tool_example_4_.jpg) -->
 
-Any surrounding context has been made into a single, joined mesh.
+### Modeling Standards
+<!--Revise for specific modeling requirements for you analysis to run properly. If useful, add an image of properly vs improperly model geometry-->
+<b>Please follow the following Rhino standards to ensure the proper functionality of the tool: </b>
 
-Sources, Calculations + Metrics
-This tool uses this method of calculating X from this source. The metric is derived in this manner. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Limitations & Context
+<input type="checkbox"> <b>My test massing is a single, simplified, CLOSED polysurface.</b>
+
+  <li>Try "SelClosedSrf" to make sure it is closed.</li>
+
+<input type="checkbox"> <b>My model is oriented to True North.</b>
+
+  <li>Re-orient if it was rotated off of North at the start of the project.</li>
+
+<input type="checkbox"> <b>Any groups or blocks in the model have been ungrouped/exploded.</b>
+
+  <li>Try "SelBlockInstance" and "SelGroup" to make sure.</li>
+
+<input type="checkbox"> <b>My model is set to either Meters or Feet (not mm or in).</b><br>
+
+<input type="checkbox"> <b>My model is free of overlapping, coplanar, or intersecting geometry.</b><br>
+
+<input type="checkbox"> <b>Any obstructions around the space have been modeled (trees, topography, buildings).</b><br>
+
+<input type="checkbox"> <b>Any curved surfaces in the model have been simplified to individual flat planes.</b><br>
+
+<input type="checkbox"> <b>Any surrounding context has been made into a single, joined mesh.</b>
+
+### Sources, Calculations + Metrics
+<!--add text and/or images for any sources for you metrics, calculations & equations, assumptions and specific metric output-->
+
+<p>This tool uses this method of calculating X from this source. The metric is derived in this manner. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+### Limitations & Context
+<!--add text and/or images that expose potential for bias by stating limitations (ie what does this tool not do,) and the context in which it was created.-->
+
 This tool does X it does not do Z and Y. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Examples
+### Examples
+<!--add images and text to describe a use case below-->
+
 Here is how we used this tool on a project! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
 
 Some more text here perhaps.
 
-More project examples here:
+<b> More project examples here: </b>
