@@ -1,24 +1,37 @@
 ## Foot Traffic Analysis Tool
 
+
 ![FootTrafficSmallest](https://user-images.githubusercontent.com/69476462/161852711-5b2ed707-fe72-4132-a269-1d479ab4b3da.gif)
 
-Animation showing the generated analysis meshes of a procedurally generated urban model.
+
+###### Animation showing the generated analysis meshes of a procedurally generated urban model.
+
 
 ### Description
 
 This tool analyzes the most common routes from local residences to user designated destinations (i.e. metro stations, key institutions, shopping centers, etc.)  The tool quantifies how many times each stretch of road is used to reach each given destination and displays these results on screen.  An optional functionality within the tool allows the user to allocate additional built stock alongside the streets that have the most traffic.  This generative approach is designed to facilitate efficiently placed commercial zoning development where pedestrian activity is the highest (and thus most lucrative.)
 
-### How To Use
+### How To Use 
+#### Inputs
 
-<b>Step by Step Instructions:</b>
-
-1. Link to epw file
-1. Link to epw file`
-2. Right click on "Context" -> Select Multiple and select building obstructions.
-3. Right click on "Ground" -> Select Multiple and select ground.
-4. Right click on "Ground" -> Select Multiple and select the massing(s) you want to test.
-5. Adjust Threshold X,Y,Z
-6. Review visual and metric outputs. Does it look correct? Does something look wrong? Common issues below.
+1. Crv: Analysis Area > Select the closed polygon that encloses the analysis area
+2. Crv: Street Center Lines > Select open curves in Rhino that are the center of streets within analysis area
+3. Srf: Streets > Input directly from 'Streets' output in 'Blocks and Parcels' cluster 
+4. Num: Center Road Offset > Input the width of streets within the analysis area
+5. Srf: Blocks
+6. Brep: Residential Buildings
+7. Pt: Destination 1
+8. Pt: Destination 2 (optional)
+9. Pt: Destination 3 (optional)
+10. Num: Population Threshold for 'High Traffic'
+11. Num: Analysis Color Sensitivity Upper Bound
+12. Num: New Commercial Building Offset Divisor
+13. Num: New Commercial Building Height Divisor
+14. Right click on "Context" -> Select Multiple and select building obstructions.
+15. Right click on "Ground" -> Select Multiple and select ground.
+16. Right click on "Ground" -> Select Multiple and select the massing(s) you want to test.
+17. Adjust Threshold X,Y,Z
+18. Review visual and metric outputs. Does it look correct? Does something look wrong? Common issues below.
 
 ![description](../images/grasshopper_tree.jpg)
 
