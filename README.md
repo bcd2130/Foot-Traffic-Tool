@@ -4,7 +4,7 @@
 ![FootTrafficSmallest](https://user-images.githubusercontent.com/69476462/161852711-5b2ed707-fe72-4132-a269-1d479ab4b3da.gif)
 
 
-###### Animation showing the generated analysis meshes of a procedurally generated urban model.
+###### Animation showing an analysis of a procedurally generated urban model.
 
 
 ## 1. Description
@@ -12,7 +12,7 @@
 This tool analyzes the most common, shortest routes from local residences to user designated destinations (i.e. metro stations, key institutions, etc.) within a given analysis area.  The tool quantifies how many times each stretch of road is used to reach each given destination and displays these results on screen.  An added functionality within the tool allows the user to allocate additional built stock alongside streets that see the most foot traffic.  This generative approach is designed to facilitate efficiently allocated commercial zoning and development where the highest projected pedestrian activity exists.
 
 ## 2. How To Use 
-### Inputs: Basic Design Space
+### Inputs: Basic Design Space (1-6) and Controls (7-14)
 
 1. **Crv: Analysis Area** > Input from one referenced closed polygon curve.
 2. **Crv: Street Center Lines** > Input from referenced open curve(s) that show the center line of street(s) that cross through the analysis area.
@@ -20,9 +20,6 @@ This tool analyzes the most common, shortest routes from local residences to use
 4. **Num: Center Road Offset** > Input the width of streets within the analysis area.  You may directly connect the values from the 'Street Size' panel (in the provided class grasshopper script).
 5. **Srf: Blocks** > Input directly from 'Blocks' output in *'Blocks and Parcels'* cluster (in the provided class grasshopper script). 
 6. **Brep: Residential Buildings** > Input directly from 'Buildings' output in *'Blocks and Parcels'* cluster (in the provided class grasshopper script).
-
-### Inputs: Cluster Controls
-
 7. **Pt: Destination 1** > Right click the connected pt node and choose a point in rhino to reference.
 8. **Pt: Destination 2** (optional) > Right click the connected pt node and choose a point in rhino to reference.  You may choose to leave this node unreferenced.
 9. **Pt: Destination 3** (optional) > Right click the connected pt node and choose a point in rhino to reference.  You may choose to leave this node unreferenced.
@@ -32,13 +29,23 @@ This tool analyzes the most common, shortest routes from local residences to use
 13. **Num: Offset Divisor** > Set one value on the attached slider.
 14. **Num: Height Divisor** > Set one value on the attached slider.
 
+### Outputs
+
+1. **Num: PPSS Above Threshold Only** > Displays the number of 'People per Street Segment' above the user defined threshold (Input 11) for the **Rhino** visualization.
+2. **Col: Analysis Color** > Diplays colors of the overlaid analysis mesh for the **Rhino** visualization.  (Defined by Input 12.)
+3. **Pt: Text Display Point** > Provides a location to add a text readout for the **Rhino** visualization.  Displays values above the upper bounds analysis only (Input 12).
+4. **Brep: Analysis Extrusions (Scout)** > Analysis overlay geometry for **Scout** and/or **Rhino**.  Connect to the coorisponding 'Analysis Geometry" group in Part 11 of the Scout pipeline.
+5. **Num: PPSS** > 'People per Street Segment', from the analysis of shortest walk(s) from origin points to destination(s).  Connect to the coorisponding 'Analysis Geometry" group in Part 11 of the Scout pipeline. 
+6. **Num: % Above Threshold (Scout)** > Displays the proportion of all streets that exceed the threshold (Input 11).  These street segments are categorized as having 'high traffic' and used in scout as a metric to understand how concentrated or dispersed movement is within the analysis area.  Connect to the coorisponding node in 'Outputs for Data.csv' in Part 3 of the Scout Pipeline.
+7. **Brep: New Commercial Buildings** > Generates geometry based on the Foot Traffic Analysis results.  Read 10, 11, 13 and 14 in Section 5 for more information.  You may add this proceedurally generated geometry to your residential buildings for further analysis (of the combined result).
+
 ![description](../images/grasshopper_tree.jpg)
 
 
 ## 3. Troubleshooting
 
 1. Destination points may be placed anywhere on the world XY plane, inside or outside the analysis area.  However, if do not place a destination point on an existing street (Input 2), the script will connect automatically connect it to your street network with the shortest straight line possible.  Ensure that that line ends at an existing street end point.
-2. All input numbers must be positive.  See
+2. All input numbers must be positive.  See Section 5 for details.
 
 
 ## 4. Required Files
@@ -50,10 +57,6 @@ This tool analyzes the most common, shortest routes from local residences to use
 
 ![description](../images/tool_example_4.jpg)
 
-
-<br />
-
-<!-- ![description of image](/XIM-GSAPP-Fa20/images/tool_example_4_.jpg) -->
 
 ## 5. Modeling Standards and *Detailed Explanation of What is Happening Under the Hood*
 
@@ -93,7 +96,7 @@ C. All input geometry must be and located on world XY plane.  3D geometry bases 
 D. Recommended model unit: feet.
 
 
-## 6. Sources, Calculations + Metrics
+## 6. Outputs and Metrics
 <!--add text and/or images for any sources for you metrics, calculations & equations, assumptions and specific metric output-->
 
 <p>This tool uses this method of calculating X from this source. The metric is derived in this manner. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
