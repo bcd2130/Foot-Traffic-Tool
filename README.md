@@ -11,6 +11,10 @@
 
 This tool analyzes the most common, shortest routes from local residences to user designated destinations (i.e. metro stations, key institutions, etc.) within a given analysis area.  The tool quantifies how many times each stretch of road is used to reach each given destination and displays these results on screen.  An added functionality within the tool allows the user to allocate additional built stock alongside streets that see the most foot traffic.  This generative approach is designed to facilitate efficiently allocated commercial zoning and development where the highest projected pedestrian activity exists.
 
+![Combined 1](https://user-images.githubusercontent.com/69476462/162016904-a0773f33-ed0d-4725-8bb8-179fadc876a9.png)
+###### Right: The tool performing an analysis of a residential buildings (white) within an urban context by color coding the most commonly used nearby streets in red and least in blue.
+###### Left: Procedurally generated commercial buildings (dark grey) can be automatically added to the urban model alongside the most used streets where pedestrian audiences are most likely to be found using the Foot Traffic Analysis Tool.
+
 ## 2. How To Use 
 ### Inputs
 
@@ -39,6 +43,11 @@ This tool analyzes the most common, shortest routes from local residences to use
 6. **Num: % Above Threshold (Scout)** > Displays the proportion of all streets that exceed the threshold (Input 11).  These street segments are categorized as having 'high traffic' and used in scout as a metric to understand how concentrated or dispersed movement is within the analysis area.  Connect to the corresponding node in 'Outputs for Data.csv' in Part 3 of the **Scout** Pipeline.
 7. **Brep: New Commercial Buildings** > Generates geometry based on the Foot Traffic Analysis results.  Read 10, 11, 13 and 14 in Section 5 for more information.  You may add this procedurally generated geometry to your residential buildings for further analysis (of the combined result) in **Rhino**.  Connect these massings to the "Blank Geometry' group in Part 13 of the **Scout** Pipeline.
 
+![Canvas](https://user-images.githubusercontent.com/69476462/162018597-6dcce408-c84e-4a55-afeb-e02c651c3e5d.png)
+###### An entire working example of the tool in action is provided below (Section 4).  Pictured here from left to right: group 1: residential urban context generator, group 2: The Foot Traffic Analysis Tool and its controls, group 3: visualizations.
+
+![Canvaszoom](https://user-images.githubusercontent.com/69476462/162019466-4e7cdbf2-03c9-4abb-870a-ff65e8b17183.png)
+###### A zoomed in view of the inputs and output of the Foot Traffic Analysis Tool as discussed in depth in this section.
 
 ## 3. Troubleshooting
 
@@ -84,6 +93,8 @@ This tool analyzes the most common, shortest routes from local residences to use
 14. **Num: Height Divisor** > One number only.
 - *Each street segment that passes the 'highly trafficked' threshold (Input 12) is assigned a value equal to the number of people that use that street segment in the shortest walk simulation.  Commercial buildings alongside those street segments are generated automatically and their vertical footprint can be controlled using this slider.  A higher value will reduce the building height, and vice versa.*
 
+![Threshold-Animation](https://user-images.githubusercontent.com/69476462/162023744-144ad04a-ff12-489e-b24f-450532128b30.gif)
+###### An animation showing how raising the threshold value (Input 11) limits where commercial building generation occurs.
 
 **General Notes**
 
@@ -104,7 +115,12 @@ The Foot Traffic Analysis Tool counts the total number of times a segment of str
 This tool is intended to be used in conjunction with outputs made by other grasshopper clusters that together generate urban design iterations [see: X Information Modeling Spring 2022 (XIM S2022)].  You may alter or replace these expected geometry generators as you see fit, however, you should make sure the geometry types and data structures they make are replicated.  Some functionalities have been added to the geometry generators from XIM S2022 (see *'Air Rights Modification'* cluster) and some functionalities have been stripped from it (multiple street options are no longer included).  Reintroducing multiple street options (or adding design space options) into the iteration pool may require the user to change some aspects of the Foot Traffic Tool.  To help in this regard relevant design space generators from XIM S2022 are included with the analysis tool so that the user can more easily alter the design space with a working geometry generator for reference first.
 
 ## 8. Examples
-Here is how I used this tool on a project!
+
+https://user-images.githubusercontent.com/69476462/162025063-e9e2398b-9209-49de-a795-a471a14a2ad4.mp4
+###### An animation showing a range of residential geometry options complimented by the Foot Traffic Analysis Tool's procedurally generated commercial building allocations.
+
+![ViewCapture20220406_124512](https://user-images.githubusercontent.com/69476462/162025744-14db4e71-03d8-4b12-b059-90b0fb39298c.png)
+###### Alternative visualization option shows the most used streets as colored pipes rather than extruded surfaces.
 
 
 
