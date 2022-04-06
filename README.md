@@ -87,13 +87,13 @@ This tool analyzes the most common, shortest routes from local residences to use
 
 **General Notes**
 
-A. For inputs 1-6, use the provided design space geometry clusters.
+A. For inputs 1-6, it is recommended that you use the provided design space geometry clusters.
 
 B. Curve and surface inputs must be planar and projected (parallel to the XY plane).
 
 C. All input geometry must be located on the world XY plane.  3D geometry bases must be placed on the world XY plane (no geometry floating in the air).
 
-D. Recommended model unit: feet.
+D. Recommended model units: feet.
 
 
 ## 6. Metrics
