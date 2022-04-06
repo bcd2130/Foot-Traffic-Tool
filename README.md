@@ -34,10 +34,10 @@ This tool analyzes the most common, shortest routes from local residences to use
 1. **Num: PPSS Above Threshold Only** > Displays the number of 'People per Street Segment' above the user defined threshold (Input 11) for the **Rhino** visualization.
 2. **Col: Analysis Color** > Display colors of the overlaid analysis mesh for the **Rhino** visualization.  (Defined by Input 12.)
 3. **Pt: Text Display Point** > Provides a location to add a text readout for the **Rhino** visualization.  Displays values above the upper bounds analysis only (Input 12).
-4. **Brep: Analysis Extrusions (Scout)** > Analysis overlay geometry for **Scout** and/or **Rhino**.  Connect to the corresponding 'Analysis Geometry" group in Part 11 of the Scout pipeline.
-5. **Num: PPSS** > 'People per Street Segment', from the analysis of shortest walk(s) from origin points to destination(s).  Connect to the corresponding 'Analysis Geometry" group in Part 11 of the Scout pipeline. 
-6. **Num: % Above Threshold (Scout)** > Displays the proportion of all streets that exceed the threshold (Input 11).  These street segments are categorized as having 'high traffic' and used in scout as a metric to understand how concentrated or dispersed movement is within the analysis area.  Connect to the corresponding node in 'Outputs for Data.csv' in Part 3 of the Scout Pipeline.
-7. **Brep: New Commercial Buildings** > Generates geometry based on the Foot Traffic Analysis results.  Read 10, 11, 13 and 14 in Section 5 for more information.  You may add this procedurally generated geometry to your residential buildings for further analysis (of the combined result).
+4. **Brep: Analysis Extrusions (Scout)** > Analysis overlay geometry for **Scout** and/or **Rhino**.  Connect to the corresponding 'Analysis Geometry" group in Part 11 of the **Scout** pipeline.
+5. **Num: PPSS** > 'People per Street Segment', from the analysis of shortest walk(s) from origin points to destination(s).  Connect to the corresponding 'Analysis Geometry" group in Part 11 of the **Scout** pipeline. 
+6. **Num: % Above Threshold (Scout)** > Displays the proportion of all streets that exceed the threshold (Input 11).  These street segments are categorized as having 'high traffic' and used in scout as a metric to understand how concentrated or dispersed movement is within the analysis area.  Connect to the corresponding node in 'Outputs for Data.csv' in Part 3 of the **Scout** Pipeline.
+7. **Brep: New Commercial Buildings** > Generates geometry based on the Foot Traffic Analysis results.  Read 10, 11, 13 and 14 in Section 5 for more information.  You may add this procedurally generated geometry to your residential buildings for further analysis (of the combined result) in **Rhino**.  Connect these massings to the "Blank Geometry' group in Part 13 of the **Scout** Pipeline.
 
 
 ## 3. Troubleshooting
