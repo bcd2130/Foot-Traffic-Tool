@@ -84,7 +84,9 @@ This tool analyzes the most common, shortest routes from local residences to use
 14. **Num: Height Divisor** > One number only.
 - *Each street segment that passes the 'highly trafficked' threshold (Input 12) is assigned a value equal to the number of people that use that street segment in the shortest walk simulation.  Commercial buildings alongside those street segments are generated automatically and their vertical footprint can be controlled using this slider.  A higher value will reduce the building height, and vice versa.*
 
+
 **General Notes**
+
 A. For inputs 1-6, use the provided design space geometry clusters.
 
 B. Curve and surface inputs must be planar and projected (parallel to the XY plane).
