@@ -39,8 +39,6 @@ This tool analyzes the most common, shortest routes from local residences to use
 6. **Num: % Above Threshold (Scout)** > Displays the proportion of all streets that exceed the threshold (Input 11).  These street segments are categorized as having 'high traffic' and used in scout as a metric to understand how concentrated or dispersed movement is within the analysis area.  Connect to the corresponding node in 'Outputs for Data.csv' in Part 3 of the Scout Pipeline.
 7. **Brep: New Commercial Buildings** > Generates geometry based on the Foot Traffic Analysis results.  Read 10, 11, 13 and 14 in Section 5 for more information.  You may add this procedurally generated geometry to your residential buildings for further analysis (of the combined result).
 
-![description](../images/grasshopper_tree.jpg)
-
 
 ## 3. Troubleshooting
 
@@ -101,15 +99,6 @@ The Foot Traffic Analysis Tool counts the total number of times a segment of str
 This tool is intended to be used in conjunction with outputs made by other grasshopper clusters that together generate urban design interactions (X Information Modeling Spring 2022).  You may alter or replace these expected geometry generators as you see fit, however, you should make sure the geometry types and data structures they make are replicated.  Some functionalities have been added to the geometry generators from XIM S2022 (see *'Air Rights Modification'* cluster) and some functionalities have been stripped from it (multiple street options are no longer included).  Reintroducing multiple street options (or adding design space options) into the interation pool may require the user to change some aspects of the Foot Traffic Tool.  To help in this regard relavent design space generators from XIM S2022 are included with the analysis tool so that the user can more easily alter the design space with a working geometry generator for reference first.
 
 ## 8. Examples
-<!--add images and text to describe a use case below-->
-
-Here is how we used this tool on a project! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-
-
-Some more text here perhaps.
-
-<b> More project examples here: </b>
-
+Here is how I used this tool on a project!
 
 
