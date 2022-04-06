@@ -50,12 +50,9 @@ This tool analyzes the most common, shortest routes from local residences to use
 
 ## 4. Required Files
 
-[Rhino File](https://drive.google.com/file/d/1Dl6bLP5LsK59_b2Z96hwKzbD1wWGi-fn/view?usp=sharing)
+[Rhino File (Google Drive Link)](https://drive.google.com/file/d/1Dl6bLP5LsK59_b2Z96hwKzbD1wWGi-fn/view?usp=sharing)
 
-[Grasshopper File](https://github.com/XIM-GSAPP/XIM-GSAPP-Fa20/raw/main/src/files/Analysis%20Tool%20Example.gh)
-
-
-![description](../images/tool_example_4.jpg)
+[Grasshopper File (Github)](https://github.com/bcd2130/Foot-Traffic-Tool/blob/main/Foot%20Traffic%20Analysis%20Tool.gh)
 
 
 ## 5. Modeling Standards and *Detailed Explanation of What is Happening Under the Hood*
