@@ -9,29 +9,30 @@
 
 ### Description
 
-This tool analyzes the most common routes from local residences to user designated destinations (i.e. metro stations, key institutions, shopping centers, etc.)  The tool quantifies how many times each stretch of road is used to reach each given destination and displays these results on screen.  An optional functionality within the tool allows the user to allocate additional built stock alongside the streets that have the most traffic.  This generative approach is designed to facilitate efficiently placed commercial zoning development where pedestrian activity is the highest (and thus most lucrative.)
+This tool analyzes the most common routes from local residences to user designated destinations (i.e. metro stations, key institutions, shopping centers, etc.) within a given analysis area.  The tool quantifies how many times each stretch of road is used to reach each given destination and displays these results on screen.  An optional functionality within the tool allows the user to allocate additional built stock alongside the streets that have the most traffic.  This generative approach is designed to facilitate efficiently placed commercial zoning development where pedestrian activity is the highest (and thus most lucrative.)
 
 ### How To Use 
 #### Inputs
 
-1. Crv: Analysis Area > Select the closed polygon that encloses the analysis area
-2. Crv: Street Center Lines > Select open curves in Rhino that are the center of streets within analysis area
-3. Srf: Streets > Input directly from 'Streets' output in 'Blocks and Parcels' cluster 
-4. Num: Center Road Offset > Input the width of streets within the analysis area
-5. Srf: Blocks
-6. Brep: Residential Buildings
-7. Pt: Destination 1
-8. Pt: Destination 2 (optional)
-9. Pt: Destination 3 (optional)
-10. Num: Population Threshold for 'High Traffic'
-11. Num: Analysis Color Sensitivity Upper Bound
-12. Num: New Commercial Building Offset Divisor
-13. Num: New Commercial Building Height Divisor
-14. Right click on "Context" -> Select Multiple and select building obstructions.
-15. Right click on "Ground" -> Select Multiple and select ground.
-16. Right click on "Ground" -> Select Multiple and select the massing(s) you want to test.
-17. Adjust Threshold X,Y,Z
-18. Review visual and metric outputs. Does it look correct? Does something look wrong? Common issues below.
+1. **Crv: Analysis Area** > Input from one referenced closed polygon curve that encloses the analysis area
+2. **Crv: Street Center Lines** > Input from referenced open curve(s) that show the center line of street(s) that cross through the analysis area.
+3. **Srf: Streets** > Input directly from 'Streets' output in *'Blocks and Parcels'* cluster (in the provided class grasshopper script).
+4. **Num: Center Road Offset** > Input the width of streets within the analysis area.  You may directly connect the values from the 'Street Size' panel (in the provided class grasshopper script) or connect a slider.
+5. **Srf: Blocks** > Input directly from 'Blocks' output in *'Blocks and Parcels'* cluster (in the provided class grasshopper script). 
+6. **Brep: Residential Buildings** > Input directly from 'Buildings' output in *'Blocks and Parcels'* cluster (in the provided class grasshopper script).  
+7. **Pt: Destination 1** > Right click the connected pt node and choose a point in rhino to reference.
+8. **Pt: Destination 2** (optional) > Right click the connected pt node and choose a point in rhino to reference.  You may choose to leave this node unreferenced.  Adding multiple destination points after the first will increase computation time.
+9. **Pt: Destination 3** (optional) > Right click the connected pt node and choose a point in rhino to reference.  You may choose to leave this node unreferenced.  Adding multiple destination points after the first will increase computation time.
+10.  **Num: Population** > Set one value on the attached slider.  The recommended default value is 1000 for an analysis area consisting of 50-200 buildings. The script uses this value to distribute origin points throughout the analysis area which are used in conjunction with the user defined destination points and street network in the analysis area to generate a shortest walk analysis. Input 6: Residential Buildings is used to allocate a proportionate amount of the population .  It is recommended that you raise this value if you anticipate the total amount of buildings in the analysis to be above 200.  Conversely, you may lower the value to substantially decrease computation time if the 
+11. **Num: Population Threshold for 'High Traffic'** > Set one value on the attached slider.  This value determines when a street that which X amount of foot traffic en route to a user defined destination may considered 'Highly Trafficked'.  This threshold is transfered to the generative commercial building portion of the script to determine where to build.  In other words, a LOWER threshold will yield MORE commercial generation, and vice versa.  This value also is used to calculate the percentage of street lengths within the analysis area that see 'High Traffic', which is output for use in Scout.  Please note: adding destination points after the first means the same street network within the analysis area are analyzed multiple times.  The number of uses on a given road from each simulation after the first are overlaid on top of each other
+12. **Num: Analysis Color Sensitivity Upper Bound**
+13. **Num: New Commercial Building Offset Divisor**
+14. **Num: New Commercial Building Height Divisor**
+15. Right click on "Context" -> Select Multiple and select building obstructions.
+16. Right click on "Ground" -> Select Multiple and select ground.
+17. Right click on "Ground" -> Select Multiple and select the massing(s) you want to test.
+18. Adjust Threshold X,Y,Z
+19. Review visual and metric outputs. Does it look correct? Does something look wrong? Common issues below.
 
 ![description](../images/grasshopper_tree.jpg)
 
