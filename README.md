@@ -48,7 +48,7 @@ This tool analyzes the most common, shortest routes from local residences to use
 
 ## 4. Required Files
 
-[Rhino File (Google Drive Link)](https://drive.google.com/file/d/1Dl6bLP5LsK59_b2Z96hwKzbD1wWGi-fn/view?usp=sharing)
+[Rhino File (Google Drive)](https://drive.google.com/file/d/1Dl6bLP5LsK59_b2Z96hwKzbD1wWGi-fn/view?usp=sharing)
 
 [Grasshopper File (Github)](https://github.com/bcd2130/Foot-Traffic-Tool/blob/main/Foot%20Traffic%20Analysis%20Tool.gh)
 
