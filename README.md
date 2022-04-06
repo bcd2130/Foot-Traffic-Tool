@@ -12,8 +12,8 @@
 This tool analyzes the most common, shortest routes from local residences to user designated destinations (i.e. metro stations, key institutions, etc.) within a given analysis area.  The tool quantifies how many times each stretch of road is used to reach each given destination and displays these results on screen.  An added functionality within the tool allows the user to allocate additional built stock alongside streets that see the most foot traffic.  This generative approach is designed to facilitate efficiently allocated commercial zoning and development where the highest projected pedestrian activity exists.
 
 ![Combined 1](https://user-images.githubusercontent.com/69476462/162016904-a0773f33-ed0d-4725-8bb8-179fadc876a9.png)
-###### Right: The tool performing an analysis of a residential buildings (white) within an urban context by color coding the most commonly used nearby streets in red and least in blue.
-###### Left: Procedurally generated commercial buildings (dark grey) can be automatically added to the urban model alongside the most used streets where pedestrian audiences are most likely to be found using the Foot Traffic Analysis Tool.
+###### Left: The tool performing an analysis of a residential buildings (white) within an urban context by color coding the most commonly used nearby streets in red and least in blue.
+###### Right: Procedurally generated commercial buildings (blue-grey) can be automatically added to the urban model alongside the most used streets where pedestrian audiences are most likely to be found using the Foot Traffic Analysis Tool.
 
 ## 2. How To Use 
 ### Inputs
@@ -116,7 +116,7 @@ This tool is intended to be used in conjunction with outputs made by other grass
 
 ## 8. Examples
 
-https://user-images.githubusercontent.com/69476462/162025063-e9e2398b-9209-49de-a795-a471a14a2ad4.mp4
+![ezgif-4-dc6d0e5414](https://user-images.githubusercontent.com/69476462/162081474-c07ef663-2876-4ad7-95c3-0d956c21f782.gif)
 ###### An animation showing a range of residential geometry options complimented by the Foot Traffic Analysis Tool's procedurally generated commercial building allocations.
 
 ![ViewCapture20220406_124512](https://user-images.githubusercontent.com/69476462/162025744-14db4e71-03d8-4b12-b059-90b0fb39298c.png)
